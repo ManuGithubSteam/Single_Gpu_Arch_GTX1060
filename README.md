@@ -7,3 +7,11 @@ Fully patched
 
 Use old Nvidia driver! : 368 something
 
+General KVM/VM: 
+
+https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF
+https://github.com/vanities/GPU-Passthrough-Arch-Linux-to-Windows10
+https://heiko-sieger.info/running-windows-10-on-linux-using-kvm-with-vga-passthrough/
+
+Single GPU see:
+see: https://github.com/joeknock90/Single-GPU-Passthrough
