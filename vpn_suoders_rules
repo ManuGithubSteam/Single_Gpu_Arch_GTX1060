@@ -1,0 +1,6 @@
+# SUDO laws to start vpn again after coming back from the vm
+
+# VPN server commands
+Cmnd_Alias VPN_CMDS = /usr/bin/systemctl start openvpn-server@VPN.service, /usr/bin/systemctl stop openvpn-server@VPN.service, /usr/bin/systemctl restart openvpn-server@vnp.service
+
+<USER> ALL=(ALL) NOPASSWD: VPN_CMDS
