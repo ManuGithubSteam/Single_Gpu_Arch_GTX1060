@@ -5,7 +5,11 @@ Single Gpu Passtrough - GTX 1060 6GB Arch Win10
 Win10 Enterprise
 Fully patched
 
-Use old Nvidia driver! : 368 something
+Use old Nvidia driver! : 368 something then update to the newest one.
+
+Also PCI Passtrough all usbs to xou get input.
+
+Use SSH to play music from the host. Intel HDA passtrough is not reliable and has a lot of glitches!
 
 Get SSH going to get sftp support and change files with host.
 
