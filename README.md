@@ -14,6 +14,15 @@ Use SSH to play music from the host. Intel HDA passtrough is not reliable and ha
 
 Get SSH going to get sftp support and change files with host.
 
+# Make your Windows life easier
+
+## Filezilla
+
+"C:\Program Files\FileZilla FTP Client\filezilla.exe" -c "0/Archnux"
+
+
+## Reading
+
 General KVM/VM: 
 
 https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF
