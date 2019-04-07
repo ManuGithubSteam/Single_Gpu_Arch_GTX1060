@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# start this before you start the win10 vm!!!!
+
 modprobe virtio-net
 modprobe virtio-balloon
 ###modprobe virtio
