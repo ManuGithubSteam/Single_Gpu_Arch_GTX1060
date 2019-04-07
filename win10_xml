@@ -64,8 +64,8 @@
   <devices>
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='file' device='disk'>
-      <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/win10.qcow2'/>
+      <driver name='qemu' type='raw'/>
+      <source file='/var/lib/libvirt/images/win10.raw'/>
       <target dev='sda' bus='scsi'/>
       <boot order='3'/>
       <address type='drive' controller='0' bus='0' target='0' unit='0'/>
