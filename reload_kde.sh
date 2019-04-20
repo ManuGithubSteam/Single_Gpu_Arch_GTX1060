@@ -4,12 +4,12 @@ if [ -f /tmp/from_kvm.txt ]; then
 
 echo "Coming from VM, relaoding Plasma and VPN ...."
 
-sleep 3
+sleep 2
     
 # restart plasma
 killall plasmashell
 killall plasmashell
-sleep 2
+sleep 1
 
 plasmashell &
 
@@ -17,7 +17,8 @@ plasmashell &
 
 ### wait till wlan is up again
 
-sleep 5
+sleep 15
+systemctl restart openvpn-server@mullvad_se-got.service
 
 # restart vpn
 #nmcli device disconnect wlp0s26u1u4
