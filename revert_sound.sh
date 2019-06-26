@@ -29,6 +29,11 @@ virsh nodedev-reattach pci_0000_00_1a_0
 virsh nodedev-reattach pci_0000_06_00_0
 virsh nodedev-reattach pci_0000_08_00_0
 
+# Re-Bind the sound device
+# sound - remove the generic sound device and add the pci sound device 
+virsh nodedev-reattach pci_0000_00_1b_0
+
+
 # Re-Bind the Tyys to linux
 echo 1 > /sys/class/vtconsole/vtcon0/bind
 echo 1 > /sys/class/vtconsole/vtcon1/bind

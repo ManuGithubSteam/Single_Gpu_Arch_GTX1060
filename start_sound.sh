@@ -4,9 +4,6 @@
 # NETWORK && GENERAL FUNCTION
 ######
 
-# Loose some stuff (nfs mount etc)
-/home/manuel/.kvm/loose_kde.sh
-
 # load some needed modules and start bridged net
 modprobe virtio-net    
 modprobe virtio-balloon
@@ -58,6 +55,13 @@ virsh nodedev-detach pci_0000_00_1a_0
 virsh nodedev-detach pci_0000_06_00_0
 virsh nodedev-detach pci_0000_08_00_0
 
+####
+# SOUND
+####
+
+# sound - remove the generic sound device and add the pci sound device 
+virsh nodedev-detach pci_0000_00_1b_0
+  
 ####
 # START
 ####
