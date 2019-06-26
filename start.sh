@@ -1,11 +1,20 @@
 #!/bin/bash
   
+#####
+# NETWORK && GENERAL FUNCTION
+######
+
 # load some needed modules and start bridged net
 modprobe virtio-net    
 modprobe virtio-balloon
 modprobe virtio-blk 
 modprobe virtio-scsi   
+systemctl start libvirtd.service 
 virsh net-start default
+
+#####
+# GRAPHICS CARD
+######
 
 # Stop display manager
 systemctl stop display-manager.service
@@ -33,14 +42,30 @@ modprobe -r nvidia
 virsh nodedev-detach pci_0000_04_00_0
 virsh nodedev-detach pci_0000_04_00_1
 
-# Unbind  USB Hubs
+####
+# USB Devices
+####
+
+# Unbind  USB Hubs - these must be added in the devices
 virsh nodedev-detach pci_0000_06_00_0
 virsh nodedev-detach pci_0000_08_00_0
 virsh nodedev-detach pci_0000_00_1d_0
 virsh nodedev-detach pci_0000_00_1a_0
-# sound 
-#virsh nodedev-detach pci_0000_00_1b_0
+# USB 3
+virsh nodedev-detach pci_0000_06_00_0
+virsh nodedev-detach pci_0000_08_00_0
+
+####
+# SOUND
+####
+
+# sound - remove the generic sound device and add the pci sound device 
+virsh nodedev-detach pci_0000_00_1b_0
   
+####
+# START
+####
+
 # Load VFIO Kernel Module  
 modprobe vfio-pci  
  
