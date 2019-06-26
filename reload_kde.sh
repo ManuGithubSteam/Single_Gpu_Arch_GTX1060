@@ -9,7 +9,7 @@ sleep 2
 # restart plasma
 killall plasmashell
 killall plasmashell
-sleep 1
+sleep 15
 
 plasmashell &
 
@@ -19,6 +19,9 @@ plasmashell &
 
 sleep 15
 systemctl restart openvpn-server@mullvad_se-got.service
+
+xcalib -d :0 .local/share/DisplayCAL/display.icc 
+
 
 # restart vpn
 #nmcli device disconnect wlp0s26u1u4
