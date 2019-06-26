@@ -15,6 +15,10 @@ Use SSH to play music from the host. Intel HDA passtrough is not reliable and ha
 
 Get SSH going to get sftp support and change files with host.
 
+## Be AWARE
+
+-> Libvirt does change your *.raw file location to the default one when it gets an update! You need to re edit the vm to be able to boot!
+
 # Make your Windows life easier
 
 ## Filezilla
