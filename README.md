@@ -5,9 +5,10 @@ Single Gpu Passtrough - GTX 1060 6GB Arch Win10
 Win10 Enterprise
 Fully patched
 
-Use old Nvidia driver! : 368 something then update to the newest one.
+Use old Nvidia driver in Windows! : 368 something then update to the newest one.
 
-Also PCI Passtrough all usbs to xou get input.
+Also PCI Passtrough all usbs so you get input like mouse and keyboard. You need to add them as pci devices in virt-manager.
+The scripts do unbind them from the linux host and windows will find them. After shutdown they will be rebound to linux.
 
 Use SSH to play music from the host. Intel HDA passtrough is not reliable and has a lot of glitches!
 - Install moc for this :-)
